@@ -5,24 +5,28 @@
         <div class="col-md-7 col-md-offset-2">
             @include('partials.flash-messages')
         </div>
-        <div class="col-md-9 col-md-offset-1">
-            <ul>
-                <li>
-                    <a href="{{ action('LoginController@auth', ['provider' => 'facebook']) }}" class="btn btn-block btn-lg btn-social btn-facebook social-button">
-                        <span class="fa fa-facebook"></span> login with Facebook
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1>Please sign in</h1>
+            {{--<ul>--}}
+                {{--<li>--}}
+                    <a href="{{ action('LoginController@auth', ['provider' => 'facebook']) }}"
+                       class="btn btn-block btn-lg btn-social btn-facebook social-button">
+                        <span class="fa fa-facebook"></span> Facebook
                     </a>
-                </li>
-                <li>
-                    <a href="{{ action('LoginController@auth', ['provider' => 'google']) }}" class="btn btn-block btn-lg btn-social btn-google social-button">
-                        <span class="fa fa-google"></span> login with Google
+                {{--</li>--}}
+                {{--<li>--}}
+                    <a href="{{ action('LoginController@auth', ['provider' => 'google']) }}"
+                       class="btn btn-block btn-lg btn-social btn-google social-button">
+                        <span class="fa fa-google"></span> Google
                     </a>
-                </li>
-                <li>
-                    <a href="{{ action('LoginController@auth', ['provider' => 'twitter']) }}" class="btn btn-block btn-lg btn-social btn-twitter social-button">
-                        <span class="fa fa-twitter"></span> login with Twitter
+                {{--</li>--}}
+                {{--<li>--}}
+                    <a href="{{ action('LoginController@auth', ['provider' => 'twitter']) }}"
+                       class="btn btn-block btn-lg btn-social btn-twitter social-button">
+                        <span class="fa fa-twitter"></span> Twitter
                     </a>
-                </li>
-            </ul>
+                {{--</li>--}}
+            {{--</ul>--}}
         </div>
     </div>
 @stop
