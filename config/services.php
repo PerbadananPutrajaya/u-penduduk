@@ -38,7 +38,7 @@ return [
    'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'https://u-penduduk.putrajaya.my/login/facebook/callback',
+        'redirect' => 'https://ris.putrajaya.my/login/facebook/callback',
     ],
 
 
