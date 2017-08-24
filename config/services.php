@@ -38,19 +38,7 @@ return [
    'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://u-penduduk.putrajaya.my/login/facebook/callback',
-    ],
-
-    'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://u-penduduk.putrajaya.my/login/google/callback',
-    ],
-
-    'twitter' => [
-        'client_id' => env('TWITTER_CLIENT_ID'),
-        'client_secret' => env('TWITTER_CLIENT_SECRET'),
-        'redirect' => 'http://u-penduduk.putrajaya.my/login/twitter/callback',
+        'redirect' => 'https://u-penduduk.putrajaya.my/login/facebook/callback',
     ],
 
 

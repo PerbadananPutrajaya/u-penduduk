@@ -20,6 +20,7 @@ class CreateSocialLoginProfilesTable extends Migration
             $table->string('facebook_id')->nullable();
             $table->string('google_id')->nullable();
             $table->string('twitter_id')->nullable();
+            $table->string('live_id')->nullable();
             $table->timestamps();
         });
     }
