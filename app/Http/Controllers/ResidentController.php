@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Resident;
 use Request;
 use View;
+use Wildside\Userstamps\Userstamps;
 
 class ResidentController extends Controller
 {
@@ -91,11 +92,64 @@ class ResidentController extends Controller
      * @param  \App\Resident  $resident
      * @return \Illuminate\Http\Response
      */
-    public function destroy($resident)
+    public function destroy($id)
     {
-        $resident = Resident::findOrFail($resident);
+        $resident = Resident::findOrFail($id);
         $resident->delete();
 
         return redirect('residents.index');
+    }
+
+    /**
+     * Check user nationality than storeByNric or storeByPassport
+     *
+     */
+    public function storeUserProfile(Request $request){
+        $input = Request::all();
+        $nationality = $input['nationality'];
+        $is_malaysian = ($nationality == 'Malaysian') ? ResidentController::storeByNric($request) : ResidentController::storeByPassport($request);
+        return redirect('dashboard');
+    }
+
+    /**
+     * Store user info by nric
+     *
+     */
+    public function storeByNric($request) {
+        $input = Request::all();
+        $resident = Resident::updateOrCreate(
+            ['nric' => $input['nric']],[
+                'first_name' => $input['first_name'],
+                'last_name' => $input['last_name'],
+                'nationality' => $input['nationality'],
+                'nric' => $input['nric'],
+                'passport' => $input['passport'],
+                'date_of_birth' => $input['date_of_birth'],
+                'gender' => $input['gender'],
+                'blood_group' => $input['blood_group'],
+                'user_id' => auth()->id(),
+            ]
+        );
+    }
+
+    /**
+     * Store user info by passport
+     *
+     */
+    public function storeByPassport($request) {
+        $input = Request::all();
+        $resident = Resident::updateOrCreate(
+            ['passport' => $input['passport']],[
+                'first_name' => $input['first_name'],
+                'last_name' => $input['last_name'],
+                'nationality' => $input['nationality'],
+                'nric' => $input['nric'],
+                'passport' => $input['passport'],
+                'date_of_birth' => $input['date_of_birth'],
+                'gender' => $input['gender'],
+                'blood_group' => $input['blood_group'],
+                'user_id' => auth()->id(),
+            ]
+        );
     }
 }

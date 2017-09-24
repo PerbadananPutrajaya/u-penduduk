@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/address', function () {
+    return view('address');
+});
 
 Route::get('login', 'LoginController@showLoginPage');
 Route::get('login/{provider}', 'LoginController@auth')
@@ -23,6 +26,13 @@ Route::get('login/{provider}/callback', 'LoginController@login')
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('logout', 'LoginController@logout');
-    Route::get('dashboard', 'LoginController@showDashBoard');
+    Route::get('showUserProfile', 'LoginController@showUserProfile');
     Route::resource('residents', 'ResidentController');
+    Route::post('storeUserProfile', 'ResidentController@storeUserProfile');
+    Route::post('residents/storeByNric', 'ResidentController@storeByNric');
+    Route::post('residents/storeByPassport', 'ResidentController@storeByPassport');
+    // Admin's Dashbaord
+    Route::get('dashboard', 'LoginController@showDashBoard');
+    Route::get('dashboard/residents','DashboardController@residentsList');
+    Route::get('dashboard/residences','DashboardController@residencesList');
 });

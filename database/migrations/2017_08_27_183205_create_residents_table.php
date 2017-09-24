@@ -18,13 +18,17 @@ class CreateResidentsTable extends Migration
 
             $table->string('first_name', 64);
             $table->string('last_name', 64);
-            $table->string('nationality');
-            $table->string('nric', 14);
-            $table->string('passport', 9);
+            $table->string('nationality')->nullable();
+            $table->string('nric', 14)->nullable()->index()->unique();;
+            $table->string('passport', 9)->nullable()->index()->unique();;
             $table->string('gender', 6);
+            $table->string('blood_group',3);
             $table->date('date_of_birth');
             $table->integer('user_id')->unsigned()->nullable()->references('id')->on('users');
 
+            $table->unsignedInteger('created_by')->nullable()->default(null);
+            $table->unsignedInteger('updated_by')->nullable()->default(null);
+            $table->unsignedInteger('deleted_by')->nullable()->default(null);
             $table->timestamps();
         });
     }

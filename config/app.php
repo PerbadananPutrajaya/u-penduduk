@@ -162,14 +162,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-//        Laravel\Socialite\SocialiteServiceProvider::class,
-        \SocialiteProviders\Manager\ServiceProvider::class,
-        Creativeorange\Gravatar\GravatarServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
+//        Laravel\Socialite\SocialiteServiceProvider::class,
+        \SocialiteProviders\Manager\ServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         //
 
