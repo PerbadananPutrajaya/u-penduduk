@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a72dba2ff0e9daf10c33a34a59e2f00d",
+    "content-hash": "9ffa918d79a745dec2b52da18c815151",
     "packages": [
         {
             "name": "creativeorange/gravatar",
@@ -49,6 +49,51 @@
                 "laravel"
             ],
             "time": "2017-02-15T22:07:40+00:00"
+        },
+        {
+            "name": "crockett/csv-seeder",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andycrockett/laravel-csv-seeder.git",
+                "reference": "e5d97e12da1d7033f68c67130fefc7bb93099ccd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andycrockett/laravel-csv-seeder/zipball/e5d97e12da1d7033f68c67130fefc7bb93099ccd",
+                "reference": "e5d97e12da1d7033f68c67130fefc7bb93099ccd",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Crockett\\CsvSeeder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Crockett",
+                    "email": "andyhcrockett@gmail.com"
+                }
+            ],
+            "description": "Database seeding using CSV files",
+            "keywords": [
+                "csv",
+                "laravel",
+                "seed",
+                "seeder",
+                "seeding",
+                "seeds"
+            ],
+            "time": "2016-02-11T08:41:47+00:00"
         },
         {
             "name": "doctrine/inflector",

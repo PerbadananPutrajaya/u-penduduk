@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use Crockett\CsvSeeder\CsvSeeder;
 
-class StreetsTableSeeder extends Seeder
+class StreetsTableSeeder extends CsvSeeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class StreetsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // seed the apartments table
+        $this->seedFromCSV(base_path('database/seeds/csvs/streets.csv'), 'streets');
     }
 }

@@ -11,6 +11,7 @@ class ResidencesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // seed the residences table
+        $this->seedFromCSV(base_path('database/seeds/csvs/residences.csv'), 'residences');
     }
 }
