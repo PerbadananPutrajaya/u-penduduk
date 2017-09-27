@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Putrajaya's Residents Information System">
+    <meta name="author" content="Perbadanan Putrajaya">
+    <meta name="keyword"
+          content="Residents Information System, Sistem Maklumat Penduduk, Putrajaya, Perbadanan Putrajaya">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>@yield('page-title') - U-Penduduk</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
@@ -14,7 +20,7 @@
           integrity="sha256-rnmbX+ZXZml9xbNUKt/qXfgpCi6zLJX7qqR+7vX/1ZY=" crossorigin="anonymous"/>
     <style>
         body {
-            background-image: url(img/bg.jpg);
+            background-image: url(img/bg.png);
         }
         .container{
             height: 100vh;

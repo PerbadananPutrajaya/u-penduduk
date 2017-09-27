@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Hafidz Nasruddin">
+    <meta name="description" content="Putrajaya's Residents Information System">
+    <meta name="author" content="Perbadanan Putrajaya">
     <meta name="keyword"
           content="Residents Information System, Sistem Maklumat Penduduk, Putrajaya, Perbadanan Putrajaya">
     <link rel="shortcut icon" href="img/favicon.png">
