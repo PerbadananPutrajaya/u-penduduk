@@ -23,6 +23,22 @@ class Resident extends Model
         'deleted_by'
     ];
 
+    public function setNricAttribute($value) {
+        if ( empty($value) ) { // will check for empty string, null values, see php.net about it
+            $this->attributes['nric'] = NULL;
+        } else {
+            $this->attributes['nric'] = $value;
+        }
+    }
+
+    public function setPassportAttribute($value) {
+        if ( empty($value) ) { // will check for empty string, null values, see php.net about it
+            $this->attributes['passport'] = NULL;
+        } else {
+            $this->attributes['passport'] = $value;
+        }
+    }
+
     /**
      * Get the user record associated with the resident.
      */
