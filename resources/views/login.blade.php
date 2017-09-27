@@ -1,5 +1,5 @@
 @extends('layouts.basic')
-@section('page-title', 'Please login')
+@section('page-title', 'Login')
 @section('page-content')
     <div class="card-group mx-auto">
             <div class="card">
