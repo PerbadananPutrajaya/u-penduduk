@@ -45,17 +45,13 @@
             <div class='form-group row'>
                 {!! Form::label('gender', 'Gender:', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-10">
-                    {!! Form::select('gender', ['Male' => 'Male','Female' => 'Female'], ['class' => 'form-control'],
-                        ['placeholder' => 'Pick gender...']) !!}
+                    {!! Form::select('gender', ['Male' => 'Male','Female' => 'Female'], old('gender')) !!}
                 </div>
             </div>
             <div class='form-group row'>
                 {!! Form::label('blood_group', 'Blood Group:', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-10">
-                    {!! Form::select('blood_group',
-                        ['O' => 'O', 'A' => 'A', 'B' => 'B', 'AB' => 'AB'],
-                        ['class' => 'form-control'],
-                        ['placeholder' => 'Pick blood group...']) !!}
+                    {!! Form::select('blood_group', ['O' => 'O', 'A' => 'A', 'B' => 'B', 'AB' => 'AB'],old('blood_group')) !!}
                 </div>
             </div>
             <div class='form-group row'>
