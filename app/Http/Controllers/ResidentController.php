@@ -119,8 +119,7 @@ class ResidentController extends Controller
         $input = Request::all();
         $resident = Resident::updateOrCreate(
             ['nric' => $input['nric']],[
-                'first_name' => $input['first_name'],
-                'last_name' => $input['last_name'],
+                'name' => $input['name'],
                 'nationality' => $input['nationality'],
                 'nric' => $input['nric'],
                 'passport' => $input['passport'],
@@ -140,8 +139,7 @@ class ResidentController extends Controller
         $input = Request::all();
         $resident = Resident::updateOrCreate(
             ['passport' => $input['passport']],[
-                'first_name' => $input['first_name'],
-                'last_name' => $input['last_name'],
+                'name' => $input['name'],
                 'nationality' => $input['nationality'],
                 'nric' => $input['nric'],
                 'passport' => $input['passport'],
