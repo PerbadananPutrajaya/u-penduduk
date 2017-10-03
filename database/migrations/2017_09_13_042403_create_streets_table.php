@@ -18,7 +18,8 @@ class CreateStreetsTable extends Migration
 
             $table->string('name');
             $table->string('postcode');
-            $table->string('precinct');
+            $table->integer('precinct_id')->unsigned()
+                ->references('id')->on('precincts');
 
             $table->unsignedInteger('created_by')->nullable()->default(null);
             $table->unsignedInteger('updated_by')->nullable()->default(null);

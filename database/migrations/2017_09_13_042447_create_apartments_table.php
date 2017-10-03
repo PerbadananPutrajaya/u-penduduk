@@ -19,7 +19,8 @@ class CreateApartmentsTable extends Migration
             $table->string('name');
             $table->integer('street_id')->unsigned()
                 ->references('id')->on('streets');
-            $table->string('precinct');
+            $table->integer('precinct_id')->unsigned()
+                ->references('id')->on('precincts');
 
             $table->unsignedInteger('created_by')->nullable()->default(null);
             $table->unsignedInteger('updated_by')->nullable()->default(null);

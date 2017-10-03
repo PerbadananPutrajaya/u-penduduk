@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTypeToApartmentsTable extends Migration
+class CreateTablePrecinctsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddTypeToApartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('apartments', function (Blueprint $table) {
-            $table->string('type')->after('precinct_id');
+        Schema::create('precincts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddTypeToApartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('apartments', function (Blueprint $table) {
-            $table->dropColumn('type');
-        });
+        Schema::dropIfExists('precincts');
     }
 }

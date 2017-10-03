@@ -8,11 +8,19 @@ use Wildside\Userstamps\Userstamps;
 class Apartment extends Model
 {
     use Userstamps;
-    public function street() {
-        $this->belongsTo(Street::class);
+
+    public function street()
+    {
+        return $this->belongsTo(Street::class);
     }
 
-    public function residence() {
-        $this->hasMany(Residence::class);
+    public function precinct()
+    {
+        return $this->belongsTo(Precinct::class);
+    }
+
+    public function residence()
+    {
+        return $this->hasMany(Residence::class);
     }
 }
