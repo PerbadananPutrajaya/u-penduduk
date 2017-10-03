@@ -16,14 +16,13 @@ class CreateResidentsTable extends Migration
         Schema::create('residents', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('first_name', 64);
-            $table->string('last_name', 64);
+            $table->string('name');
             $table->string('nationality')->nullable();
-            $table->string('nric', 14)->nullable()->index()->unique();;
-            $table->string('passport', 9)->nullable()->index()->unique();;
-            $table->string('gender', 6);
-            $table->string('blood_group',3);
-            $table->date('date_of_birth');
+            $table->string('nric', 14)->nullable()->index()->unique();
+            $table->string('passport', 9)->nullable()->index()->unique();
+            $table->string('gender', 6)->nullable();
+            $table->string('blood_group', 2);
+            $table->date('date_of_birth')->nullable();
             $table->integer('user_id')->unsigned()->nullable()->references('id')->on('users');
 
             $table->unsignedInteger('created_by')->nullable()->default(null);

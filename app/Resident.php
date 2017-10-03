@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Wildside\Userstamps\Userstamps;
 
@@ -9,8 +10,7 @@ class Resident extends Model
 {
     use Userstamps;
     protected $fillable = [
-        'first_name',
-        'last_name',
+        'name',
         'nationality',
         'nric',
         'passport',
@@ -23,16 +23,35 @@ class Resident extends Model
         'deleted_by'
     ];
 
-    public function setNricAttribute($value) {
-        if ( empty($value) ) { // will check for empty string, null values, see php.net about it
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'date_of_birth',
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
+    public function age()
+    {
+        return $this->date_of_birth->diffInYears(Carbon::now());
+    }
+
+    public function setNricAttribute($value)
+    {
+        if (empty($value)) { // will check for empty string, null values, see php.net about it
             $this->attributes['nric'] = NULL;
         } else {
             $this->attributes['nric'] = $value;
         }
     }
 
-    public function setPassportAttribute($value) {
-        if ( empty($value) ) { // will check for empty string, null values, see php.net about it
+    public function setPassportAttribute($value)
+    {
+        if (empty($value)) { // will check for empty string, null values, see php.net about it
             $this->attributes['passport'] = NULL;
         } else {
             $this->attributes['passport'] = $value;

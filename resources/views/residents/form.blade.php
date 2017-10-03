@@ -1,16 +1,10 @@
 <div class='form-group row'>
-    {!! Form::label('first_name', 'First Name:', ['class' => 'col-sm-2 col-form-label']) !!}
+    {!! Form::label('name', 'Name:', ['class' => 'col-sm-2 col-form-label']) !!}
     <div class="col-sm-10">
-        {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
+        {!! Form::text('name', null, ['class' => 'form-control']) !!}
     </div>
 </div>
-<div class='form-group row'>
-    {!! Form::label('last_name', 'Last Name:', ['class' => 'col-sm-2 col-form-label']) !!}
-    <div class="col-sm-10">
-        {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
-    </div>
-</div>
-<div class='form-group row ui-widget'>
+<div class='ui-widget form-group row'>
     {!! Form::label('nationality', 'Nationality:', ['class' => 'col-sm-2 col-form-label']) !!}
     <div class="col-sm-10">
         {!! Form::text('nationality', null, ['class' => 'form-control']) !!}
@@ -43,7 +37,7 @@
 <div class='form-group row'>
     {!! Form::label('date_of_birth', 'Date Of Birth:', ['class' => 'col-sm-2 col-form-label']) !!}
     <div class="col-sm-10">
-        {!! Form::date('date_of_birth', \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
+        {!! Form::date('date_of_birth', $resident->date_of_birth ) !!}
     </div>
 </div>
 {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
@@ -246,7 +240,8 @@
         ];
 
         $("#nationality").autocomplete({
-            source: nationality
+            source: nationality,
+            minLength: 2
         });
     });
 </script>

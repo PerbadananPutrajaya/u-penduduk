@@ -12,15 +12,9 @@
                 </div>
             </div>
             <div class='form-group row'>
-                {!! Form::label('first_name', 'First Name:', ['class' => 'col-sm-2 col-form-label']) !!}
+                {!! Form::label('name', 'Name:', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-10">
-                    {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
-                </div>
-            </div>
-            <div class='form-group row'>
-                {!! Form::label('last_name', 'Last Name:', ['class' => 'col-sm-2 col-form-label']) !!}
-                <div class="col-sm-10">
-                    {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
                 </div>
             </div>
             <div class='form-group row ui-widget'>
@@ -33,7 +27,7 @@
                 {!! Form::label('nric', 'NRIC No:', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-10">
                     {!! Form::text('nric', null, ['class' => 'form-control disabled', 'disabled' => 'true']) !!}
-                    <span class="help-block">Please enter NRIC in this format YYMMDD-SS-RRRR</span>
+                    <span class="help-block">Please enter NRIC in this format 810222164321</span>
                 </div>
             </div>
             <div class='form-group row'>
@@ -57,7 +51,7 @@
             <div class='form-group row'>
                 {!! Form::label('date_of_birth', 'Date Of Birth:', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-10">
-                    {!! Form::date('date_of_birth', \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
+                    {!! Form::date('date_of_birth', \Carbon\Carbon::now()) !!}
                 </div>
             </div>
             {!! Form::hidden('user_id', auth()->id()) !!}
@@ -70,11 +64,11 @@
             // check nationality type
             $('#nationality_type').click(function () {
                 if ($('#nationality_type').is(':checked')) {
-                    $('#nationality').val('Malaysian').prop("disabled", false).addClass("disabled");
+                    $('#nationality').val('Malaysian').prop("readonly", true);
                     $('#nric').prop("disabled", false).removeClass("disabled");
                 }
                 else {
-                    $('#nationality').val(null).prop("disabled", false).removeClass("disabled");
+                    $('#nationality').val(null).prop("readonly", false);
                     $('#nric').prop("disabled", true).addClass("disabled");
                 }
             });

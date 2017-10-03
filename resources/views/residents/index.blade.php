@@ -13,8 +13,7 @@
                         <thead class="table-inverse">
                         <tr>
                             <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Name</th>
                             <th>Nationality</th>
                             <th>NRIC No</th>
                             <th>Passport No</th>
@@ -24,8 +23,7 @@
                         <tfoot class="table-inverse">
                         <tr>
                             <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Name</th>
                             <th>Nationality</th>
                             <th>NRIC No</th>
                             <th>Passport No</th>
@@ -36,8 +34,7 @@
                         @foreach($residents as $key => $value)
                             <tr>
                                 <td>{{ $value->id }}</td>
-                                <td>{{ $value->first_name }}</td>
-                                <td>{{ $value->last_name }}</td>
+                                <td>{{ $value->name }}</td>
                                 <td>{{ $value->nationality }}</td>
                                 <td>{{ $value->nric }}</td>
                                 <td>{{ $value->passport }}</td>
@@ -51,8 +48,7 @@
                                     </a>
                                     <button type="button" class="btn btn-outline-success" data-toggle="modal"
                                             data-target="#resident_profile"
-                                            data-first_name="{{ $value->first_name }}"
-                                            data-last_name="{{ $value->last_name }}"
+                                            data-name="{{ $value->first_name }}"
                                             data-nationality="{{ $value->nationality }}"
                                             data-nric="{{ $value->nric }}"
                                             data-passport="{{ $value->passport }}"
@@ -88,15 +84,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group row">
-                        <label for="first_name" class="col-sm-3 col-form-label">First Name</label>
+                        <label for="name" class="col-sm-3 col-form-label">Name</label>
                         <div class="col-sm-9">
-                            <input type="text" id="first_name" disabled class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="last_name" class="col-sm-3 col-form-label">Last Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" id="last_name" disabled class="form-control">
+                            <input type="text" id="name" disabled class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -154,8 +144,7 @@
 
                 $('#resident_profile').on('show.bs.modal', function (event) {
                     var button = $(event.relatedTarget) // Button that triggered the modal
-                    var first_name = button.data('first_name')
-                    var last_name = button.data('last_name')
+                    var name = button.data('name')
                     var nationality = button.data('nationality')
                     var nric = button.data('nric')
                     var passport = button.data('passport')
@@ -164,8 +153,7 @@
                     var date_of_birth = button.data('date_of_birth')
                     var user_id = button.data('user_id')
                     var modal = $(this)
-                    modal.find('#first_name').val(first_name)
-                    modal.find('#last_name').val(last_name)
+                    modal.find('#name').val(name)
                     modal.find('#nationality').val(nationality)
                     modal.find('#nric').val(nric)
                     modal.find('#passport').val(passport)
