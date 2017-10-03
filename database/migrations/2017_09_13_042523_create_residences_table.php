@@ -17,6 +17,7 @@ class CreateResidencesTable extends Migration
             $table->increments('id');
 
             $table->string('unit_no'); // for apartment Block-Floor-Unit
+            $table->string('prisma_id'); //xxxx-yyyy-zzzz
             $table->string('type', 10); // landed / apartment
             $table->integer('apartment_id')->unsigned()
                 ->references('id')->on('apartments');

@@ -27,12 +27,11 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-center-radar.min.css"
           integrity="sha256-oBplq33o6VuQTi1uKu4XhVzulVDQCzi7zn4V4HujBJY=" crossorigin="anonymous"/>
-    {{--<link rel="stylesheet"--}}
-          {{--href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-corner-indicator.min.css"--}}
-          {{--integrity="sha256-IpOyzfc21sbCfGdHK5mbWBfniKNCZcgSUMmGrt7u93Q=" crossorigin="anonymous"/>--}}
     <!-- JQuery UI -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
             integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous"/>
     <!-- Datatables -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.min.css"

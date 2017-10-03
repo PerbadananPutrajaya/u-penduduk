@@ -21,21 +21,24 @@ class Residence extends Model
     /**
      * Get the apartment record associated with the residence.
      */
-    public function apartment() {
+    public function apartment()
+    {
         return $this->belongsTo(Apartment::class);
     }
 
     /**
      * Get the street record associated with the residence.
      */
-    public function street() {
+    public function street()
+    {
         return $this->belongsTo(Street::class);
     }
 
     /**
      * The resident that belong to the residences.
      */
-    public function residents() {
-        return $this->belongsToMany(Resident::class,'household');
+    public function residents()
+    {
+        return $this->belongsToMany(Resident::class, 'household');
     }
 }

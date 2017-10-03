@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col">
             {!! Form::model($resident, ['method' => 'PATCH', 'action' => ['ResidentController@update',$resident->id]]) !!}
-            @include('residents.form', ['submitButtonText' => 'Edit Resident'])
+            @include('residents.form', ['submitButtonText' => 'Save'])
             {!! Form::close() !!}
         </div>
     </div>
