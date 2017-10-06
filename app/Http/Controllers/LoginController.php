@@ -26,7 +26,7 @@ class LoginController extends Controller
     public function showDashboard()
     {
         $profile = Resident::where('user_id', auth()->id())->firstOrFail();
-        return view('dashboard', compact('profile'));
+        return view('dashboard.index', compact('profile'));
     }
 
     public function auth($provider)
