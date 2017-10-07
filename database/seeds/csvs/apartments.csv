@@ -1,46 +1,46 @@
-name,street_id,precinct,type
-Pangsapuri 5R1,1,P05,Kuarters
-Pangsapuri 5R3,1,P05,Kuarters
-Pangsapuri 5R4,1,P05,Kuarters
-Pangsapuri 5R6,1,P05,Kuarters
-Pangsapuri Seruling,1,P05,PPA1M
-Pangsapuri Larai,1,P06,PPA1M
-Pangsapuri Fasa 4A,1,P08,Kuarters
-Pangsapuri Fasa 4B,1,P08,Kuarters
-Pangsapuri Fasa 4C,1,P08,Kuarters
-Pangsapuri Fasa 8R2,1,P08,Kuarters
-Pangsapuri Fasa 1,1,P09,Kuarters
-Pangsapuri Fasa 10,1,P09,Kuarters
-Pangsapuri Fasa 11,1,P09,Kuarters
-Pangsapuri Fasa 12,1,P09,Kuarters
-Pangsapuri Fasa 2,1,P09,Kuarters
-Pangsapuri Fasa 3,1,P09,Kuarters
-Pangsapuri Fasa 4,1,P09,Kuarters
-Pangsapuri Fasa 5,1,P09,Kuarters
-Pangsapuri Fasa 6,1,P09,Kuarters
-Pangsapuri Fasa 7,1,P09,Kuarters
-Pangsapuri Fasa 8,1,P09,Kuarters
-Pangsapuri Putra Harmoni,1,P09,Private
-Pangsapuri Melinjau,1,P11,PPA1M
-Pangsapuri Palma,1,P11,PPA1M
-Pangsapuri PR1MA Presint 11,1,P11,PR1MA
-Pangsapuri Putra Damai,1,P11,Private
-Pangsapuri Zon 3A,1,P11,Kuarters
-Pangsapuri Zon 4A,1,P11,Kuarters
-Pangsapuri Zon 6B,1,P11,Kuarters
-Pangsapuri 14-12,1,P14,Kuarters
-Pangsapuri 14-7,1,P14,Kuarters
-Pangsapuri Fasa 15-12A,1,P15,Kuarters
-Pangsapuri Fasa 15-12B,1,P15,Kuarters
-Pangsapuri Fasa 1C,1,P16,Kuarters
-Pangsapuri Jintan,1,P16,PPA1M
-Pangsapuri 17RK1,1,P17,Kuarters
-Pangsapuri 17RK2,1,P17,Kuarters
-Pangsapuri Kasturi,1,P17,PPA1M
-Pangsapuri Ketumbar,1,P17,PPA1M
-Pangsapuri Pudina,1,P17,PPA1M
-Pangsapuri 18R12,1,P18,Kuarters
-Pangsapuri 18R13,1,P18,Kuarters
-Pangsapuri 18R4,1,P18,Kuarters
-Pangsapuri 18R8,1,P18,Kuarters
-Pangsapuri Selasih,1,P18,PPA1M
+name,street_id,precinct_id,type
+Pangsapuri 5R1,1,5,Kuarters
+Pangsapuri 5R3,1,5,Kuarters
+Pangsapuri 5R4,1,5,Kuarters
+Pangsapuri 5R6,1,5,Kuarters
+Pangsapuri Seruling,1,5,PPA1M
+Pangsapuri Larai,1,6,PPA1M
+Pangsapuri Fasa 4A,1,8,Kuarters
+Pangsapuri Fasa 4B,1,8,Kuarters
+Pangsapuri Fasa 4C,1,8,Kuarters
+Pangsapuri Fasa 8R2,1,8,Kuarters
+Pangsapuri Fasa 1,1,9,Kuarters
+Pangsapuri Fasa 10,1,9,Kuarters
+Pangsapuri Fasa 11,1,9,Kuarters
+Pangsapuri Fasa 12,1,9,Kuarters
+Pangsapuri Fasa 2,1,9,Kuarters
+Pangsapuri Fasa 3,1,9,Kuarters
+Pangsapuri Fasa 4,1,9,Kuarters
+Pangsapuri Fasa 5,1,9,Kuarters
+Pangsapuri Fasa 6,1,9,Kuarters
+Pangsapuri Fasa 7,1,9,Kuarters
+Pangsapuri Fasa 8,1,9,Kuarters
+Pangsapuri Putra Harmoni,1,9,Private
+Pangsapuri Melinjau,1,11,PPA1M
+Pangsapuri Palma,1,11,PPA1M
+Pangsapuri PR1MA Presint 11,1,11,PR1MA
+Pangsapuri Putra Damai,1,11,Private
+Pangsapuri Zon 3A,1,11,Kuarters
+Pangsapuri Zon 4A,1,11,Kuarters
+Pangsapuri Zon 6B,1,11,Kuarters
+Pangsapuri 14-12,1,14,Kuarters
+Pangsapuri 14-7,1,14,Kuarters
+Pangsapuri Fasa 15-12A,1,15,Kuarters
+Pangsapuri Fasa 15-12B,1,15,Kuarters
+Pangsapuri Fasa 1C,1,16,Kuarters
+Pangsapuri Jintan,1,16,PPA1M
+Pangsapuri 17RK1,1,17,Kuarters
+Pangsapuri 17RK2,1,17,Kuarters
+Pangsapuri Kasturi,1,17,PPA1M
+Pangsapuri Ketumbar,1,17,PPA1M
+Pangsapuri Pudina,1,17,PPA1M
+Pangsapuri 18R12,1,18,Kuarters
+Pangsapuri 18R13,1,18,Kuarters
+Pangsapuri 18R4,1,18,Kuarters
+Pangsapuri 18R8,1,18,Kuarters
+Pangsapuri Selasih,1,18,PPA1M

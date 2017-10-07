@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Precinct;
-use App\Residence;
-use function GuzzleHttp\Promise\all;
 use Illuminate\Http\Request;
 
-class ResidenceController extends Controller
+class HouseholdController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +13,7 @@ class ResidenceController extends Controller
      */
     public function index()
     {
-        // get all the residents
-        $residences = Residence::all();
-        $precincts = Precinct::all();
-
-        // load the view and pass the residents
-        return view('residences.index', compact('residences'), compact('precincts'));
+        //
     }
 
     /**
@@ -31,8 +23,7 @@ class ResidenceController extends Controller
      */
     public function create()
     {
-        // load the create form (app/views/residences/create.blade.php)
-        return View::make('residences.create');
+        //
     }
 
     /**
@@ -43,65 +34,51 @@ class ResidenceController extends Controller
      */
     public function store(Request $request)
     {
-        $input = Request::all();
-        Residence::create($input);
-        
-        return redirect('residences');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Residence  $residence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $residence = Residence::findOrFail($id);
-
-        return view('residences.show', compact('residence'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Residence  $residence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $residence = Residence::findOrFail($id);
-
-        return view('residences.edit', compact('residence'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Residence  $residence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $residence = Residence::findOrFail($id);
-        $input = Request::all();
-        $residence->update($input);
-
-        return redirect('residences');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Residence  $residence
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $residence = Residence::findOrFail($id);
-        $residence->delete();
-
-        return redirect('residences');
+        //
     }
 }

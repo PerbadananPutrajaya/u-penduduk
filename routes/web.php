@@ -27,12 +27,18 @@ Route::get('login/{provider}/callback', 'LoginController@login')
 Route::group(['middleware' => 'auth'], function() {
     Route::get('logout', 'LoginController@logout');
     Route::get('showUserProfile', 'LoginController@showUserProfile');
-    Route::resource('residents', 'ResidentController');
+//    Route::resource('residents', 'ResidentController');
     Route::post('storeUserProfile', 'ResidentController@storeUserProfile');
     Route::post('residents/storeByNric', 'ResidentController@storeByNric');
     Route::post('residents/storeByPassport', 'ResidentController@storeByPassport');
     // Admin's Dashbaord
     Route::get('dashboard', 'LoginController@showDashBoard');
-    Route::get('dashboard/residents','DashboardController@residentsList');
-    Route::get('dashboard/residences','DashboardController@residencesList');
+//    Route::get('dashboard/residents','DashboardController@residentsList');
+//    Route::get('dashboard/residences','DashboardController@residencesList');
+    Route::resource('dashboard/apartments','ApartmentController');
+    Route::resource('dashboard/households','HouseholdController');
+    Route::resource('dashboard/precincts','PrecinctController');
+    Route::resource('dashboard/residences','ResidenceController');
+    Route::resource('dashboard/residents','ResidentController');
+    Route::resource('dashboard/streets','StreetController');
 });
